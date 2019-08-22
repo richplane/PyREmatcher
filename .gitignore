@@ -102,3 +102,9 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+# Now actual stuff from this repo
+darksky_api_key.txt
+
+# Ignore any logfiles that may have been spat out
+*.csv
