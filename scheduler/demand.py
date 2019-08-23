@@ -1,4 +1,6 @@
 import pandas as pd
+import sys
+import os
 from typing import Union, Tuple
 
 class DemandModel(object):
@@ -39,7 +41,11 @@ class DemandModel(object):
                 'Top-floor flat'
         """
 
-        standard_profiles = pd.read_pickle('demand-profiles.pkl')
+        profile_pickle = os.path.join(
+            os.path.dirname(os.path.realpath(__file__)),
+            'demand-profiles.pkl'
+        )
+        standard_profiles = pd.read_pickle(profile_pickle)
 
         year_keys = {
             1983 : 'Pre 1983',

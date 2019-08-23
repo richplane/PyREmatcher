@@ -225,7 +225,7 @@ class LocalRE(object):
         return wind_forecast
 
 
-    def predict_generation(self, reserved_wind_consumption) -> pd.DataFrame:
+    def predict_generation(self, reserved_wind_consumption = 0) -> pd.DataFrame:
         """ Predict electricity generated from forecast
 
         Will use the timestamp index of the forecast property to estimate
